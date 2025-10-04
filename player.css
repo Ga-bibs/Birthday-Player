@@ -7,67 +7,68 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-image: url("foto.jpg"); /* Certifique-se que o caminho da imagem está correto */
+  min-height: 100vh; /* Usar min-height é melhor para conteúdo que pode crescer */
+  background-image: url("foto.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   margin: 0;
+  padding: 20px 0; /* Adiciona um respiro em telas pequenas */
   backdrop-filter: brightness(70%) blur(5px);
 }
 
 .container {
-    display: flex;
-    align-items: center;
-    gap: 50px; /* Aumentei o espaço para ficar mais harmônico */
-    background: rgba(24, 24, 24, 0.9); /* Adicionei uma leve transparência */
-    padding: 30px;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
-    max-width: 1100px; /* Usar max-width é melhor para responsividade */
-    /* width: 90%; */
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  background: rgba(24, 24, 24, 0.9);
+  padding: 30px;
+  border-radius: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+  max-width: 1100px;
+  width: 90%; /* Define uma largura relativa para se ajustar melhor */
 }
 
 .player {
-    display: flex; 
-    flex-direction: column; 
-    align-items: center; 
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .cover img {
-  width: 300px; /* Diminuí um pouco para um visual mais delicado */
+  width: 300px;
   height: 300px;
   border-radius: 15px;
   object-fit: cover;
 }
 
 .mensagem {
-    flex: 1; /* MANTENHA ESTA LINHA */
+  flex: 1;
 }
 
 .mensagem h1 {
-    margin-top: 0;
-    font-size: 2.5rem; /* Ajuste o tamanho da fonte se desejar */
+  margin-top: 0;
+  font-size: 2.5rem;
 }
 
 .mensagem p {
-    font-weight: 300; /* Um peso mais leve pode ficar mais elegante */
-    line-height: 1.6; /* Melhora a legibilidade */
+  font-weight: 300;
+  line-height: 1.6;
 }
 
-.mensagem a{
-    text-decoration: none;
-    color: #666;
-    text-transform: uppercase;
-    font-style: italic;
-    font-size: 10px;
-    transition: all 0.2s ease;
+.mensagem a {
+  text-decoration: none;
+  color: #666;
+  text-transform: uppercase;
+  font-style: italic;
+  font-size: 10px;
+  transition: all 0.2s ease;
 }
 
-.mensagem a:hover{
-    color: #1db954;
-    text-decoration: underline;
+.mensagem a:hover {
+  color: #1db954;
+  text-decoration: underline;
 }
 
 .info {
@@ -99,7 +100,6 @@ body {
   margin-top: 15px;
 }
 
-/* Estilo da barra de progresso */
 #progress {
   -webkit-appearance: none;
   width: 100%;
@@ -110,7 +110,6 @@ body {
   cursor: pointer;
 }
 
-/* A bolinha (thumb) da barra */
 #progress::-webkit-slider-thumb {
   -webkit-appearance: none;
   appearance: none;
@@ -143,4 +142,34 @@ body {
 
 #volume {
   width: 100px;
+}
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start; /* Alinha o container no topo */
+  }
+
+  .container {
+    flex-direction: column; /* Coloca os itens um embaixo do outro */
+    gap: 25px; /* Diminui o espaço entre os elementos */
+    padding: 20px; /* Diminui o preenchimento interno */
+    text-align: center; /* Centraliza todo o texto dentro do container */
+  }
+
+  .cover img {
+    width: 240px; /* Diminui o tamanho da capa */
+    height: 240px;
+  }
+
+  .mensagem h1 {
+    font-size: 1.8rem; /* Diminui o tamanho do título */
+  }
+
+  .mensagem p {
+    font-size: 0.9rem; /* Ajusta o tamanho do parágrafo */
+  }
+
+  #volume {
+    width: 80px; /* Diminui a barra de volume */
+  }
 }
