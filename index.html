@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Parabéns, Soulmate</title>
+    <link rel="shortcut icon" type="image" href="https://cdn-icons-png.flaticon.com/512/9123/9123699.png">
+    <link rel="stylesheet" href="player.css" />
+  </head>
+  <body>
+    <div class="container">
+      <div class="player">
+        <div class="cover">
+          <img id="cover" src="foto.jpg" alt="A gente na praia" />
+        </div>
+        <div class="info">
+          <h2 id="title">Música 1</h2>
+          <p id="artist">Artista Exemplo</p>
+        </div>
+        <div class="controls">
+          <button id="shuffle">⇄</button>
+          <button id="prev">⏮</button>
+          <button id="play">►</button>
+          <button id="next">⏭</button>
+          <button id="repeat">↺</button>
+          <!-- <input type="range" id="volume" min="0" max="1" step="0.01" value="1"> -->
+        </div>
+        <div class="progress-container">
+          <span id="current-time">0:00</span>
+          <input type="range" id="progress" value="0" min="0" max="100" />
+          <span id="duration">0:00</span>
+        </div>
+      </div>
+      <div class="mensagem">
+        <h1><strong>SOULMATE</strong></h1>
+        <p>
+          Oii Mib! Tá ficando velho eim, mais um aniversário seu na conta.<br>
+          Só que esse ano é diferente, né? Porque FINALMENTE a gente tem uma
+          foto juntos pra postar! Já tava na hora.<br>Sabe, eu sempre digo que você
+          é o melhor amigo que a vida poderia me dar, mas a verdade é que
+          "amigo" já ficou pequeno pra gente. Você é meu irmão desde sempre.<br>Lembra
+          quando eu te dei o apelido de "Soulmate"? Então, não foi à toa. E cada
+          ano que passa eu tenho mais certeza disso: a gente tava destinado a se
+          encontrar nessa vida. Assim como a letra dessa música.
+          <br>É muito bom ver o cara incrível que você tá se
+          tornando, tanto pra mim quanto pra Juice. E o melhor de tudo é que
+          você continua sendo o mesmo moleque encapetado e brincalhão de sempre.
+          Nunca mude, por favor.<br>Nesse novo ciclo, te desejo tudo de melhor que
+          existe. Que você consiga tirar do papel todos os seus planos e que, se
+          Deus quiser, a gente se encontre de novo ano que vem pra podermos ter mais fotos e eu codar um carrossel.
+          <br>Parabéns, Miguel! Te amo, irmãozão.
+        </p>
+
+        <a href="https://www.letras.mus.br/bangtan-boys/friends/traducao.html" target="_blank">Clique aqui para ver a tradução da música</a>
+      </div>
+    </div>
+
+    <audio id="audio" src="Friends - BTS (youtube).mp3"></audio>
+    <script src="player.js"></script>
+  </body>
+</html>

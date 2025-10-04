@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  background: #121212;
+  color: white;
+  font-family: 'Poppins', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url("foto.jpg"); /* Certifique-se que o caminho da imagem está correto */
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  backdrop-filter: brightness(70%) blur(5px);
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 50px; /* Aumentei o espaço para ficar mais harmônico */
+    background: rgba(24, 24, 24, 0.9); /* Adicionei uma leve transparência */
+    padding: 30px;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.5);
+    max-width: 1100px; /* Usar max-width é melhor para responsividade */
+    /* width: 90%; */
+}
+
+.player {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+.cover img {
+  width: 300px; /* Diminuí um pouco para um visual mais delicado */
+  height: 300px;
+  border-radius: 15px;
+  object-fit: cover;
+}
+
+.mensagem {
+    flex: 1; /* MANTENHA ESTA LINHA */
+}
+
+.mensagem h1 {
+    margin-top: 0;
+    font-size: 2.5rem; /* Ajuste o tamanho da fonte se desejar */
+}
+
+.mensagem p {
+    font-weight: 300; /* Um peso mais leve pode ficar mais elegante */
+    line-height: 1.6; /* Melhora a legibilidade */
+}
+
+.mensagem a{
+    text-decoration: none;
+    color: #666;
+    text-transform: uppercase;
+    font-style: italic;
+    font-size: 10px;
+    transition: all 0.2s ease;
+}
+
+.mensagem a:hover{
+    color: #1db954;
+    text-decoration: underline;
+}
+
+.info {
+  margin: 15px 0;
+  text-align: center;
+}
+
+.controls button,
+.extras button {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 22px;
+  margin: 0 8px;
+  cursor: pointer;
+  transition: 0.3s;
+  margin-bottom: 10px;
+}
+
+.controls button:hover,
+.extras button:hover {
+  color: #1db954;
+}
+
+.progress-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+
+/* Estilo da barra de progresso */
+#progress {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 6px;
+  background: #535353;
+  border-radius: 5px;
+  outline: none;
+  cursor: pointer;
+}
+
+/* A bolinha (thumb) da barra */
+#progress::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  background: white;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+#progress::-webkit-slider-thumb:hover {
+  transform: scale(1.2);
+}
+
+#progress::-moz-range-thumb {
+  width: 14px;
+  height: 14px;
+  background: #1db954;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.extras {
+  margin-top: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#volume {
+  width: 100px;
+}
